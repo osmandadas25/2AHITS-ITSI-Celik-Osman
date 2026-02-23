@@ -1,0 +1,9 @@
+modules = ["python-3.11"]
+[agent]
+expertMode = true
+
+[workflows]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
