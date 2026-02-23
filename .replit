@@ -1,12 +1,41 @@
-modules = ["python-3.11"]
-[agent]
-expertMode = true
+modules = ["cpp-clang14", "cpp-clang20"]
 
+[agent]
+
+expertMode = true
+ 
 [workflows]
 
-[[ports]]
-localPort = 5000
-externalPort = 80
+runButton = "Project"
+ 
+[[workflows.workflow]]
 
-[nix]
-packages = ["file", "tree", "wget"]
+name = "Project"
+
+mode = "parallel"
+
+author = "agent"
+ 
+[[workflows.workflow.tasks]]
+
+task = "workflow.run"
+
+args = "C++ Hello World"
+ 
+[[workflows.workflow]]
+
+name = "C++ Hello World"
+
+author = "agent"
+ 
+[[workflows.workflow.tasks]]
+
+task = "shell.exec"
+
+args = "clang++ main.cpp -o main && ./main"
+ 
+[workflows.workflow.metadata]
+
+outputType = "console"
+
+ 
