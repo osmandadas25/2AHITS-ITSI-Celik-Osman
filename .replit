@@ -1,7 +1,6 @@
 modules = ["cpp-clang14", "cpp-clang20"]
 
 [agent]
-
 expertMode = true
  
 [workflows]
