@@ -37,4 +37,7 @@ args = "clang++ main.cpp -o main && ./main"
 
 outputType = "console"
 
+[nix]
+packages = ["unixtools.xxd", "gdb"]
+
  
