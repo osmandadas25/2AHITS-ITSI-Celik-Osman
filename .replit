@@ -38,6 +38,6 @@ args = "clang++ main.cpp -o main && ./main"
 outputType = "console"
 
 [nix]
-packages = ["unixtools.xxd", "gdb"]
+packages = ["unixtools.xxd", "gdb", "utillinux", "exiftool"]
 
  
